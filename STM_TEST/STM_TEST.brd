@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1109,9 +1109,6 @@ design rules under a new name.</description>
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
-<param name="checkNames" value="1"/>
-<param name="checkWireStubs" value="1"/>
-<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1384,6 +1381,12 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="105.696" y="47.76" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
 <element name="PCB1" library="MicrocontrollerComponents" package="RPI2" value="RPI2" x="109.717" y="27.951" rot="R90"/>
+<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k" x="43" y="25">
+<attribute name="PROD_ID" value="RES-07856" x="43" y="25" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k" x="43" y="21">
+<attribute name="PROD_ID" value="RES-07856" x="43" y="21" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1434,6 +1437,42 @@ design rules under a new name.</description>
 <contactref element="PCB1" pad="P$9"/>
 <contactref element="PCB1" pad="P$39"/>
 <contactref element="PCB1" pad="P$25"/>
+<contactref element="R6" pad="2"/>
+<wire x1="101.018" y1="83.123" x2="107.856" y2="87.0397" width="0" layer="19" extent="1-1"/>
+<wire x1="99.402" y1="80.391" x2="101.018" y2="83.123" width="0" layer="19" extent="1-16"/>
+<wire x1="99.402" y1="78.74" x2="99.402" y2="80.391" width="0" layer="19" extent="16-16"/>
+<wire x1="97.702" y1="82.042" x2="99.402" y2="80.391" width="0" layer="19" extent="16-16"/>
+<wire x1="95.631" y1="80.352" x2="97.702" y2="82.042" width="0" layer="19" extent="16-16"/>
+<wire x1="93.98" y1="80.352" x2="95.631" y2="80.352" width="0" layer="19" extent="16-16"/>
+<wire x1="94.146" y1="82.804" x2="93.98" y2="80.352" width="0" layer="19" extent="16-16"/>
+<wire x1="92.518" y1="78.323" x2="93.98" y2="80.352" width="0" layer="19" extent="1-16"/>
+<wire x1="92.518" y1="77.523" x2="92.518" y2="78.323" width="0" layer="19" extent="1-1"/>
+<wire x1="86.145" y1="74.041" x2="92.518" y2="77.523" width="0" layer="19" extent="1-1"/>
+<wire x1="81.782" y1="70.993" x2="86.145" y2="74.041" width="0" layer="19" extent="1-1"/>
+<wire x1="79.502" y1="64.942" x2="81.782" y2="70.993" width="0" layer="19" extent="1-1"/>
+<wire x1="88.011" y1="89.281" x2="94.146" y2="82.804" width="0" layer="19" extent="16-16"/>
+<wire x1="91.098" y1="65.659" x2="86.145" y2="74.041" width="0" layer="19" extent="1-16"/>
+<wire x1="90.541" y1="58.57" x2="91.098" y2="65.659" width="0" layer="19" extent="16-16"/>
+<wire x1="93.081" y1="58.57" x2="90.541" y2="58.57" width="0" layer="19" extent="1-1"/>
+<wire x1="99.402" y1="65.659" x2="91.098" y2="65.659" width="0" layer="19" extent="16-16"/>
+<wire x1="89.155" y1="48.741" x2="90.541" y2="58.57" width="0" layer="19" extent="1-1"/>
+<wire x1="89.645" y1="43.5" x2="89.155" y2="48.741" width="0" layer="19" extent="1-16"/>
+<wire x1="91.2622" y1="43.522" x2="89.645" y2="43.5" width="0" layer="19" extent="16-16"/>
+<wire x1="89.796" y1="39.085" x2="89.645" y2="43.5" width="0" layer="19" extent="1-16"/>
+<wire x1="96.934" y1="44.43" x2="91.2622" y2="43.522" width="0" layer="19" extent="16-16"/>
+<wire x1="100.434" y1="44.432" x2="96.934" y2="44.43" width="0" layer="19" extent="16-16"/>
+<wire x1="97.53" y1="40.606" x2="96.934" y2="44.43" width="0" layer="19" extent="1-16"/>
+<wire x1="98.488" y1="36.493" x2="97.53" y2="40.606" width="0" layer="19" extent="1-1"/>
+<wire x1="105.061" y1="48.637" x2="100.434" y2="44.432" width="0" layer="19" extent="1-16"/>
+<wire x1="58.4852" y1="66.7876" x2="79.502" y2="64.942" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9452" y1="71.8676" x2="58.4852" y2="66.7876" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9452" y1="76.9476" x2="55.9452" y2="71.8676" width="0" layer="19" extent="1-1"/>
+<wire x1="58.4852" y1="84.5676" x2="55.9452" y2="76.9476" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9452" y1="59.1676" x2="58.4852" y2="66.7876" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9452" y1="51.5476" x2="55.9452" y2="59.1676" width="0" layer="19" extent="1-1"/>
+<wire x1="58.4852" y1="46.4676" x2="55.9452" y2="51.5476" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9452" y1="41.3876" x2="58.4852" y2="46.4676" width="0" layer="19" extent="1-1"/>
+<wire x1="43.85" y1="21" x2="55.9452" y2="41.3876" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3BAT">
 <contactref element="U1" pad="6"/>
@@ -1557,8 +1596,10 @@ design rules under a new name.</description>
 <wire x1="98.171" y1="89.281" x2="98.171" y2="87.884" width="0.254" layer="1"/>
 <wire x1="98.171" y1="87.884" x2="99.568" y2="86.487" width="0.254" layer="1"/>
 <wire x1="99.568" y1="86.487" x2="99.568" y2="84.573" width="0.254" layer="1"/>
+<contactref element="R5" pad="1"/>
 <wire x1="99.568" y1="82.208" x2="111.666" y2="81.6803" width="0" layer="19" extent="1-16"/>
 <wire x1="98.541" y1="58.57" x2="101.081" y2="58.57" width="0" layer="19" extent="1-1"/>
+<wire x1="42.15" y1="25" x2="98.541" y2="58.57" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="NRST">
 <contactref element="C18" pad="1"/>
@@ -1682,13 +1723,13 @@ design rules under a new name.</description>
 <wire x1="91.059" y1="47.879" x2="90.446" y2="47.266" width="0.2032" layer="1"/>
 <wire x1="90.446" y1="47.266" x2="90.446" y2="44.927" width="0.2032" layer="1"/>
 </signal>
-<signal name="SCLK">
+<signal name="SCLK_PI">
 <contactref element="PCB1" pad="P$23"/>
 </signal>
-<signal name="MISO">
+<signal name="MISO_PI">
 <contactref element="PCB1" pad="P$21"/>
 </signal>
-<signal name="MOSI">
+<signal name="MOSI_PI">
 <contactref element="PCB1" pad="P$19"/>
 </signal>
 <signal name="+5V">
@@ -1702,14 +1743,53 @@ design rules under a new name.</description>
 <signal name="CE0">
 <contactref element="PCB1" pad="P$24"/>
 </signal>
+<signal name="UART_RXD">
+<contactref element="PCB1" pad="P$10"/>
+</signal>
+<signal name="UART_TXD">
+<contactref element="PCB1" pad="P$8"/>
+</signal>
+<signal name="SDA">
+<contactref element="PCB1" pad="P$3"/>
+</signal>
+<signal name="SCL">
+<contactref element="PCB1" pad="P$5"/>
+</signal>
+<signal name="MISO">
+<contactref element="U$2" pad="PA6"/>
+<contactref element="CR1" pad="5"/>
+<wire x1="101.018" y1="79.923" x2="107.856" y2="81.6803" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="MOSI">
+<contactref element="U$2" pad="PA7"/>
+<contactref element="CR1" pad="2"/>
+<wire x1="101.018" y1="80.723" x2="110.396" y2="87.0397" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="CAN_TX">
+<contactref element="U$2" pad="PA12"/>
+</signal>
+<signal name="CAN_RX">
+<contactref element="U$2" pad="PA11"/>
+</signal>
+<signal name="I2C1_SDA">
+<contactref element="U$2" pad="PA10"/>
+</signal>
+<signal name="I2C1_SCL">
+<contactref element="U$2" pad="PA9"/>
+</signal>
+<signal name="SCK">
+<contactref element="CR1" pad="6"/>
+<contactref element="U$2" pad="PA5"/>
+<contactref element="R6" pad="1"/>
+<wire x1="101.018" y1="79.123" x2="109.126" y2="81.6803" width="0" layer="19" extent="1-1"/>
+<wire x1="42.15" y1="21" x2="101.018" y2="79.123" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="CS1">
+<contactref element="R5" pad="2"/>
+<contactref element="CR1" pad="1"/>
+<wire x1="43.85" y1="25" x2="111.666" y2="87.0397" width="0" layer="19" extent="1-1"/>
+</signal>
 </signals>
-<mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
-<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
-<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
-<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
-<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
-</mfgpreviewcolors>
 </board>
 </drawing>
 <compatibility>

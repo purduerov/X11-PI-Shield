@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4273,6 +4273,10 @@ More information and support community is available at http://www.element14.com/
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
+<part name="GND23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4376,6 +4380,14 @@ More information and support community is available at http://www.element14.com/
 <attribute name="NAME" x="333.756" y="190.5" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="336.804" y="190.5" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
+<instance part="R5" gate="G$1" x="35.56" y="223.52"/>
+<instance part="+3V1" gate="G$1" x="22.86" y="236.22">
+<attribute name="VALUE" x="20.32" y="231.14" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R6" gate="G$1" x="236.22" y="180.34" rot="R180"/>
+<instance part="GND23" gate="GND" x="223.52" y="172.72">
+<attribute name="VALUE" x="221.615" y="169.545" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4454,6 +4466,12 @@ More information and support community is available at http://www.element14.com/
 <wire x1="358.14" y1="142.24" x2="347.98" y2="142.24" width="0.1524" layer="91"/>
 <junction x="347.98" y="142.24"/>
 </segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="GND23" gate="GND" pin="GND"/>
+<wire x1="231.14" y1="180.34" x2="223.52" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="180.34" x2="223.52" y2="175.26" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -4511,6 +4529,12 @@ More information and support community is available at http://www.element14.com/
 <pinref part="U$2" gate="G$1" pin="VDDA"/>
 <wire x1="264.16" y1="205.74" x2="248.92" y2="205.74" width="0.1524" layer="91"/>
 <label x="248.92" y="205.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="223.52" x2="22.86" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="223.52" x2="22.86" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="NRST" class="0">
@@ -4596,6 +4620,83 @@ More information and support community is available at http://www.element14.com/
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="335.28" y1="185.42" x2="335.28" y2="165.1" width="0.1524" layer="91"/>
 <junction x="335.28" y="165.1"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA6"/>
+<wire x1="284.48" y1="185.42" x2="284.48" y2="175.26" width="0.1524" layer="91"/>
+<label x="284.48" y="172.72" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="CR1" gate="A" pin="D"/>
+<wire x1="114.3" y1="215.9" x2="129.54" y2="215.9" width="0.1524" layer="91"/>
+<label x="124.46" y="215.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOSI" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA7"/>
+<wire x1="289.56" y1="185.42" x2="289.56" y2="175.26" width="0.1524" layer="91"/>
+<label x="289.56" y="172.72" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="CR1" gate="A" pin="Q"/>
+<wire x1="58.42" y1="220.98" x2="45.72" y2="220.98" width="0.1524" layer="91"/>
+<label x="45.72" y="220.98" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CAN_TX" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA12"/>
+<wire x1="309.88" y1="213.36" x2="325.12" y2="213.36" width="0.1524" layer="91"/>
+<label x="317.5" y="213.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CAN_RX" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA11"/>
+<wire x1="309.88" y1="210.82" x2="325.12" y2="210.82" width="0.1524" layer="91"/>
+<label x="317.5" y="210.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="I2C1_SDA" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA10"/>
+<wire x1="309.88" y1="205.74" x2="325.12" y2="205.74" width="0.1524" layer="91"/>
+<label x="317.5" y="205.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="I2C1_SCL" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA9"/>
+<wire x1="309.88" y1="203.2" x2="325.12" y2="203.2" width="0.1524" layer="91"/>
+<label x="317.5" y="203.2" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCK" class="0">
+<segment>
+<pinref part="CR1" gate="A" pin="C"/>
+<wire x1="114.3" y1="218.44" x2="129.54" y2="218.44" width="0.1524" layer="91"/>
+<label x="124.46" y="218.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA5"/>
+<wire x1="281.94" y1="185.42" x2="281.94" y2="175.26" width="0.1524" layer="91"/>
+<label x="281.94" y="172.72" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="241.3" y1="180.34" x2="254" y2="180.34" width="0.1524" layer="91"/>
+<label x="248.92" y="180.34" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CS1" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="CR1" gate="A" pin="!_2"/>
+<wire x1="40.64" y1="223.52" x2="58.42" y2="223.52" width="0.1524" layer="91"/>
+<label x="40.64" y="223.52" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -4995,21 +5096,21 @@ More information and support community is available at http://www.element14.com/
 <wire x1="91.44" y1="152.4" x2="116.84" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SCLK" class="0">
+<net name="SCLK_PI" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO11"/>
 <wire x1="91.44" y1="147.32" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
 <label x="99.06" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="MISO" class="0">
+<net name="MISO_PI" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO9"/>
 <wire x1="91.44" y1="142.24" x2="106.68" y2="142.24" width="0.1524" layer="91"/>
 <label x="99.06" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="MOSI" class="0">
+<net name="MOSI_PI" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO10"/>
 <wire x1="91.44" y1="137.16" x2="106.68" y2="137.16" width="0.1524" layer="91"/>
@@ -5042,6 +5143,34 @@ More information and support community is available at http://www.element14.com/
 <pinref part="PCB1" gate="G$1" pin="GPIO8"/>
 <wire x1="63.5" y1="147.32" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
 <label x="48.26" y="147.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART_RXD" class="0">
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO15"/>
+<wire x1="63.5" y1="111.76" x2="45.72" y2="111.76" width="0.1524" layer="91"/>
+<label x="45.72" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART_TXD" class="0">
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO14"/>
+<wire x1="63.5" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
+<label x="45.72" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDA" class="0">
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO2"/>
+<wire x1="91.44" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
+<label x="96.52" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCL" class="0">
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO3"/>
+<wire x1="91.44" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
+<label x="96.52" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
