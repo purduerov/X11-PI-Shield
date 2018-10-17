@@ -1588,6 +1588,22 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <circle x="2" y="5" radius="0.70710625" width="0.127" layer="21"/>
 <text x="0.5" y="8.25" size="0.8128" layer="25">&gt;NAME</text>
 </package>
+<package name="TCAN337D">
+<smd name="RXD" x="0" y="0" dx="1.7" dy="0.75" layer="1"/>
+<smd name="VCC" x="0" y="1.27" dx="1.7" dy="0.75" layer="1"/>
+<smd name="GND" x="0" y="2.54" dx="1.7" dy="0.75" layer="1"/>
+<smd name="TXD" x="0" y="3.81" dx="1.7" dy="0.75" layer="1"/>
+<smd name="FAULT" x="5.4" y="0" dx="1.7" dy="0.75" layer="1"/>
+<smd name="CANL" x="5.4" y="1.27" dx="1.7" dy="0.75" layer="1"/>
+<smd name="CANH" x="5.4" y="2.54" dx="1.7" dy="0.75" layer="1"/>
+<smd name="S" x="5.4" y="3.81" dx="1.7" dy="0.75" layer="1"/>
+<wire x1="0.65" y1="4.385" x2="0.65" y2="-0.575" width="0.1524" layer="51"/>
+<wire x1="0.65" y1="-0.575" x2="4.75" y2="-0.575" width="0.1524" layer="51"/>
+<wire x1="4.75" y1="-0.575" x2="4.75" y2="4.385" width="0.1524" layer="51"/>
+<wire x1="4.75" y1="4.385" x2="0.65" y2="4.385" width="0.1524" layer="51"/>
+<text x="0" y="5" size="0.8128" layer="25">&gt;NAME</text>
+<circle x="1.8" y="3.4" radius="0.538515625" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="STM32F042K6T6">
@@ -1628,6 +1644,21 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <wire x1="17.78" y1="-17.78" x2="17.78" y2="17.78" width="0.254" layer="94"/>
 <wire x1="17.78" y1="17.78" x2="-17.78" y2="17.78" width="0.254" layer="94"/>
 <text x="-17.78" y="27.94" size="2.54" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="TCAN337D">
+<pin name="VCC" x="-15.24" y="7.62" length="middle"/>
+<pin name="TXD" x="-15.24" y="2.54" length="middle"/>
+<pin name="RXD" x="-15.24" y="-2.54" length="middle"/>
+<pin name="GND" x="-15.24" y="-7.62" length="middle"/>
+<pin name="S" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="CANH" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="CANL" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="FAULT" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.1524" layer="94"/>
+<text x="-10.16" y="11.43" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1670,6 +1701,28 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <connect gate="G$1" pin="VDDIO2" pad="VDDIO2"/>
 <connect gate="G$1" pin="VSS" pad="VSS"/>
 <connect gate="G$1" pin="VSS1" pad="VSS1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TCAN337D">
+<gates>
+<gate name="G$1" symbol="TCAN337D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TCAN337D">
+<connects>
+<connect gate="G$1" pin="CANH" pad="CANH"/>
+<connect gate="G$1" pin="CANL" pad="CANL"/>
+<connect gate="G$1" pin="FAULT" pad="FAULT"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="RXD" pad="RXD"/>
+<connect gate="G$1" pin="S" pad="S"/>
+<connect gate="G$1" pin="TXD" pad="TXD"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -4290,6 +4343,11 @@ More information and support community is available at http://www.element14.com/
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R16" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
 <part name="R17" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
+<part name="U$1" library="PI_Shield_Library" deviceset="TCAN337D" device=""/>
+<part name="C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
+<part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4302,6 +4360,7 @@ More information and support community is available at http://www.element14.com/
 <text x="76.2" y="119.38" size="1.778" layer="91">Connect CAN nodes between these two
  terminators if can bus only being used on this
  board. (bridge zero ohm resistors)</text>
+<text x="81.28" y="238.76" size="1.778" layer="91">EEPROM</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0">
@@ -4405,9 +4464,9 @@ More information and support community is available at http://www.element14.com/
 <instance part="GND23" gate="GND" x="223.52" y="172.72">
 <attribute name="VALUE" x="221.615" y="169.545" size="1.778" layer="96"/>
 </instance>
-<instance part="J2" gate="G$1" x="20.32" y="175.26">
-<attribute name="VALUE" x="17.78" y="170.434" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="17.78" y="180.848" size="1.778" layer="95" font="vector"/>
+<instance part="J2" gate="G$1" x="91.44" y="83.82">
+<attribute name="VALUE" x="88.9" y="78.994" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="88.9" y="89.408" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R10" gate="G$1" x="53.34" y="129.54" rot="R90"/>
 <instance part="R11" gate="G$1" x="53.34" y="114.3" rot="R90"/>
@@ -4425,6 +4484,20 @@ More information and support community is available at http://www.element14.com/
 </instance>
 <instance part="R16" gate="G$1" x="127" y="137.16" rot="MR0"/>
 <instance part="R17" gate="G$1" x="127" y="106.68" rot="MR0"/>
+<instance part="U$1" gate="G$1" x="99.06" y="50.8"/>
+<instance part="C7" gate="G$1" x="45.72" y="50.8">
+<attribute name="NAME" x="47.244" y="53.721" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="47.244" y="48.641" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="+3V2" gate="G$1" x="45.72" y="71.12">
+<attribute name="VALUE" x="43.18" y="66.04" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND26" gate="1" x="45.72" y="40.64">
+<attribute name="VALUE" x="43.18" y="38.1" size="1.778" layer="96"/>
+</instance>
+<instance part="GND27" gate="1" x="81.28" y="33.02">
+<attribute name="VALUE" x="78.74" y="30.48" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4519,6 +4592,17 @@ More information and support community is available at http://www.element14.com/
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="101.6" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="2"/>
+<pinref part="GND26" gate="1" pin="GND"/>
+<wire x1="45.72" y1="48.26" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+<wire x1="83.82" y1="43.18" x2="81.28" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="43.18" x2="81.28" y2="35.56" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -4582,6 +4666,15 @@ More information and support community is available at http://www.element14.com/
 <wire x1="30.48" y1="223.52" x2="22.86" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="223.52" x2="22.86" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="45.72" y1="55.88" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="45.72" y1="58.42" x2="45.72" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
+<junction x="45.72" y="58.42"/>
 </segment>
 </net>
 <net name="NRST" class="0">
@@ -4693,18 +4786,28 @@ More information and support community is available at http://www.element14.com/
 <label x="45.72" y="220.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="CAN_TX" class="0">
+<net name="CAN_STM_TX" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="PA12"/>
 <wire x1="309.88" y1="213.36" x2="325.12" y2="213.36" width="0.1524" layer="91"/>
 <label x="317.5" y="213.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="RXD"/>
+<wire x1="83.82" y1="48.26" x2="66.04" y2="48.26" width="0.1524" layer="91"/>
+<label x="60.96" y="48.26" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="CAN_RX" class="0">
+<net name="CAN_STM_RX" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="PA11"/>
 <wire x1="309.88" y1="210.82" x2="325.12" y2="210.82" width="0.1524" layer="91"/>
 <label x="317.5" y="210.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="TXD"/>
+<wire x1="83.82" y1="53.34" x2="66.04" y2="53.34" width="0.1524" layer="91"/>
+<label x="60.96" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I2C1_SDA" class="0">
@@ -4754,8 +4857,8 @@ More information and support community is available at http://www.element14.com/
 <net name="CAN_H" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="177.8" x2="43.18" y2="177.8" width="0.1524" layer="91"/>
-<label x="35.56" y="177.8" size="1.778" layer="95"/>
+<wire x1="99.06" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
+<label x="106.68" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R12" gate="G$1" pin="2"/>
@@ -4767,12 +4870,17 @@ More information and support community is available at http://www.element14.com/
 <wire x1="121.92" y1="137.16" x2="109.22" y2="137.16" width="0.1524" layer="91"/>
 <label x="116.84" y="137.16" size="1.778" layer="95" rot="MR0"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="CANH"/>
+<wire x1="114.3" y1="53.34" x2="132.08" y2="53.34" width="0.1524" layer="91"/>
+<label x="124.46" y="53.34" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="CAN_L" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="175.26" x2="43.18" y2="175.26" width="0.1524" layer="91"/>
-<label x="35.56" y="175.26" size="1.778" layer="95"/>
+<wire x1="99.06" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
+<label x="106.68" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="2"/>
@@ -4783,6 +4891,11 @@ More information and support community is available at http://www.element14.com/
 <pinref part="R17" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="106.68" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
 <label x="116.84" y="106.68" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="CANL"/>
+<wire x1="114.3" y1="48.26" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
+<label x="124.46" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
