@@ -4277,6 +4277,19 @@ More information and support community is available at http://www.element14.com/
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
 <part name="GND23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="60"/>
+<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="60"/>
+<part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37414/1" value="4.7nF"/>
+<part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
+<part name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
+<part name="R14" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="60"/>
+<part name="R15" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="60"/>
+<part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37414/1" value="4.7nF"/>
+<part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R16" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
+<part name="R17" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
 </parts>
 <sheets>
 <sheet>
@@ -4285,6 +4298,10 @@ More information and support community is available at http://www.element14.com/
 <text x="220.98" y="132.08" size="1.778" layer="91">Pin 1 (VDD)</text>
 <text x="246.38" y="132.08" size="1.778" layer="91">Pin 17 (VDDIO2)</text>
 <text x="274.32" y="132.08" size="1.778" layer="91">Pin 5 (VDDA)</text>
+<text x="86.36" y="144.78" size="1.778" layer="91">CAN TERMINATION</text>
+<text x="76.2" y="119.38" size="1.778" layer="91">Connect CAN nodes between these two
+ terminators if can bus only being used on this
+ board. (bridge zero ohm resistors)</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0">
@@ -4388,6 +4405,26 @@ More information and support community is available at http://www.element14.com/
 <instance part="GND23" gate="GND" x="223.52" y="172.72">
 <attribute name="VALUE" x="221.615" y="169.545" size="1.778" layer="96"/>
 </instance>
+<instance part="J2" gate="G$1" x="20.32" y="175.26">
+<attribute name="VALUE" x="17.78" y="170.434" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="17.78" y="180.848" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="R10" gate="G$1" x="53.34" y="129.54" rot="R90"/>
+<instance part="R11" gate="G$1" x="53.34" y="114.3" rot="R90"/>
+<instance part="C5" gate="G$1" x="35.56" y="119.38" rot="R180"/>
+<instance part="GND24" gate="1" x="35.56" y="99.06">
+<attribute name="VALUE" x="33.02" y="96.52" size="1.778" layer="96"/>
+</instance>
+<instance part="R12" gate="G$1" x="68.58" y="137.16"/>
+<instance part="R13" gate="G$1" x="68.58" y="106.68"/>
+<instance part="R14" gate="G$1" x="142.24" y="129.54" rot="MR90"/>
+<instance part="R15" gate="G$1" x="142.24" y="114.3" rot="MR90"/>
+<instance part="C6" gate="G$1" x="160.02" y="119.38" rot="MR180"/>
+<instance part="GND25" gate="1" x="160.02" y="99.06" rot="MR0">
+<attribute name="VALUE" x="162.56" y="96.52" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="R16" gate="G$1" x="127" y="137.16" rot="MR0"/>
+<instance part="R17" gate="G$1" x="127" y="106.68" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -4471,6 +4508,16 @@ More information and support community is available at http://www.element14.com/
 <pinref part="GND23" gate="GND" pin="GND"/>
 <wire x1="231.14" y1="180.34" x2="223.52" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="180.34" x2="223.52" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND24" gate="1" pin="GND"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="101.6" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND25" gate="1" pin="GND"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="101.6" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -4691,12 +4738,105 @@ More information and support community is available at http://www.element14.com/
 <label x="248.92" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="CS1" class="0">
+<net name="NSS" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="CR1" gate="A" pin="!_2"/>
 <wire x1="40.64" y1="223.52" x2="58.42" y2="223.52" width="0.1524" layer="91"/>
 <label x="40.64" y="223.52" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA4"/>
+<wire x1="279.4" y1="185.42" x2="279.4" y2="172.72" width="0.1524" layer="91"/>
+<label x="279.4" y="172.72" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="CAN_H" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="27.94" y1="177.8" x2="43.18" y2="177.8" width="0.1524" layer="91"/>
+<label x="35.56" y="177.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="137.16" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
+<label x="78.74" y="137.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="137.16" x2="109.22" y2="137.16" width="0.1524" layer="91"/>
+<label x="116.84" y="137.16" size="1.778" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="CAN_L" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="175.26" x2="43.18" y2="175.26" width="0.1524" layer="91"/>
+<label x="35.56" y="175.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="106.68" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
+<label x="78.74" y="106.68" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="106.68" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
+<label x="116.84" y="106.68" size="1.778" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="124.46" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="121.92" x2="53.34" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="121.92" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
+<junction x="53.34" y="121.92"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="109.22" x2="53.34" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="106.68" x2="63.5" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="134.62" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="124.46" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="121.92" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="121.92" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
+<junction x="142.24" y="121.92"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R15" gate="G$1" pin="1"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="142.24" y1="109.22" x2="142.24" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="106.68" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="142.24" y1="134.62" x2="142.24" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="137.16" x2="132.08" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
