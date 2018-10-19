@@ -4371,7 +4371,6 @@ More information and support community is available at http://www.element14.com/
 <part name="GND12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="C18" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
 <part name="GND15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SV2" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE05-1" device="" package3d_urn="urn:adsk.eagle:package:8190/1"/>
 <part name="C19" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="18pF"/>
@@ -4430,6 +4429,17 @@ More information and support community is available at http://www.element14.com/
 <part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
+<part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
+<part name="GND31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
+<part name="C11" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="18pF"/>
+<part name="C18" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="18pF"/>
+<part name="Y1" library="ECS-80-S-4X" deviceset="ECS-80-S-4X" device=""/>
+<part name="GND32" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4489,10 +4499,6 @@ More information and support community is available at http://www.element14.com/
 </instance>
 <instance part="GND14" gate="GND" x="297.18" y="177.8">
 <attribute name="VALUE" x="295.275" y="174.625" size="1.778" layer="96"/>
-</instance>
-<instance part="C18" gate="G$1" x="210.82" y="200.66">
-<attribute name="NAME" x="212.344" y="203.581" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="212.344" y="198.501" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="GND15" gate="GND" x="210.82" y="190.5">
 <attribute name="VALUE" x="208.915" y="187.325" size="1.778" layer="96"/>
@@ -4567,6 +4573,17 @@ More information and support community is available at http://www.element14.com/
 <instance part="GND27" gate="1" x="81.28" y="33.02">
 <attribute name="VALUE" x="78.74" y="30.48" size="1.778" layer="96"/>
 </instance>
+<instance part="C8" gate="G$1" x="124.46" y="236.22" rot="R90">
+<attribute name="NAME" x="121.539" y="237.744" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="126.619" y="237.744" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="GND29" gate="1" x="144.78" y="228.6">
+<attribute name="VALUE" x="142.24" y="226.06" size="1.778" layer="96"/>
+</instance>
+<instance part="C10" gate="G$1" x="210.82" y="200.66">
+<attribute name="NAME" x="212.344" y="203.581" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="212.344" y="198.501" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4623,11 +4640,11 @@ More information and support community is available at http://www.element14.com/
 </segment>
 <segment>
 <pinref part="GND15" gate="GND" pin="GND"/>
-<pinref part="C18" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="193.04" x2="210.82" y2="195.58" width="0.1524" layer="91"/>
 <pinref part="RESET1" gate="G$1" pin="P$1"/>
-<wire x1="210.82" y1="195.58" x2="210.82" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="195.58" x2="210.82" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="210.82" y1="198.12" x2="210.82" y2="195.58" width="0.1524" layer="91"/>
 <junction x="210.82" y="195.58"/>
 </segment>
 <segment>
@@ -4667,12 +4684,23 @@ More information and support community is available at http://www.element14.com/
 <wire x1="83.82" y1="43.18" x2="81.28" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="43.18" x2="81.28" y2="35.56" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C8" gate="G$1" pin="2"/>
+<pinref part="GND29" gate="1" pin="GND"/>
+<wire x1="127" y1="236.22" x2="144.78" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="236.22" x2="144.78" y2="231.14" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="CR1" gate="A" pin="VCC"/>
-<wire x1="114.3" y1="223.52" x2="129.54" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="223.52" x2="116.84" y2="223.52" width="0.1524" layer="91"/>
 <label x="124.46" y="223.52" size="1.778" layer="95"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="223.52" x2="129.54" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="236.22" x2="116.84" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="236.22" x2="116.84" y2="223.52" width="0.1524" layer="91"/>
+<junction x="116.84" y="223.52"/>
 </segment>
 <segment>
 <pinref part="C12" gate="G$1" pin="1"/>
@@ -4743,16 +4771,16 @@ More information and support community is available at http://www.element14.com/
 </net>
 <net name="NRST" class="0">
 <segment>
-<pinref part="C18" gate="G$1" pin="1"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="210.82" y1="215.9" x2="210.82" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="RESET1" gate="G$1" pin="P$2"/>
-<wire x1="210.82" y1="210.82" x2="210.82" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="210.82" x2="210.82" y2="210.82" width="0.1524" layer="91"/>
-<junction x="210.82" y="210.82"/>
 <pinref part="U$2" gate="G$1" pin="NRST"/>
 <wire x1="223.52" y1="210.82" x2="264.16" y2="210.82" width="0.1524" layer="91"/>
 <junction x="223.52" y="210.82"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="210.82" y1="210.82" x2="210.82" y2="205.74" width="0.1524" layer="91"/>
+<junction x="210.82" y="210.82"/>
 </segment>
 <segment>
 <pinref part="SV2" gate="G$1" pin="2"/>
@@ -5188,9 +5216,9 @@ More information and support community is available at http://www.element14.com/
 <wire x1="129.54" y1="218.44" x2="129.54" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SW2" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="187.96" x2="152.4" y2="187.96" width="0.1524" layer="91"/>
-<label x="147.32" y="187.96" size="1.778" layer="95"/>
+<pinref part="SW2" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="190.5" x2="152.4" y2="190.5" width="0.1524" layer="91"/>
+<label x="147.32" y="190.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -5240,9 +5268,9 @@ More information and support community is available at http://www.element14.com/
 <label x="160.02" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SW2" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="190.5" x2="152.4" y2="190.5" width="0.1524" layer="91"/>
-<label x="147.32" y="190.5" size="1.778" layer="95"/>
+<pinref part="SW2" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="187.96" x2="152.4" y2="187.96" width="0.1524" layer="91"/>
+<label x="147.32" y="187.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D0" class="0">
@@ -5250,6 +5278,22 @@ More information and support community is available at http://www.element14.com/
 <pinref part="U1" gate="A" pin="D0"/>
 <wire x1="91.44" y1="119.38" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
 <label x="81.28" y="119.38" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="2"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="218.44" x2="154.94" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="218.44" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="218.44" x2="154.94" y2="213.36" width="0.1524" layer="91"/>
+<junction x="154.94" y="218.44"/>
+<label x="154.94" y="213.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D1" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="D1"/>
+<wire x1="91.44" y1="116.84" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
+<label x="81.28" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -5260,22 +5304,6 @@ More information and support community is available at http://www.element14.com/
 <wire x1="154.94" y1="228.6" x2="154.94" y2="233.68" width="0.1524" layer="91"/>
 <junction x="154.94" y="228.6"/>
 <label x="154.94" y="231.14" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="D1" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="D1"/>
-<wire x1="91.44" y1="116.84" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
-<label x="81.28" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="SW1" gate="G$1" pin="2"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="218.44" x2="154.94" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="218.44" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="218.44" x2="154.94" y2="213.36" width="0.1524" layer="91"/>
-<junction x="154.94" y="218.44"/>
-<label x="154.94" y="213.36" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -5329,6 +5357,34 @@ More information and support community is available at http://www.element14.com/
 </instance>
 <instance part="GND28" gate="1" x="233.68" y="142.24">
 <attribute name="VALUE" x="231.14" y="139.7" size="1.778" layer="96"/>
+</instance>
+<instance part="GND30" gate="1" x="294.64" y="182.88">
+<attribute name="VALUE" x="292.1" y="180.34" size="1.778" layer="96"/>
+</instance>
+<instance part="+3V6" gate="G$1" x="340.36" y="226.06">
+<attribute name="VALUE" x="337.82" y="220.98" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C9" gate="G$1" x="350.52" y="218.44" rot="R90">
+<attribute name="NAME" x="347.599" y="219.964" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="352.679" y="219.964" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="GND31" gate="1" x="368.3" y="208.28">
+<attribute name="VALUE" x="365.76" y="205.74" size="1.778" layer="96"/>
+</instance>
+<instance part="C11" gate="G$1" x="220.98" y="198.12">
+<attribute name="NAME" x="222.504" y="201.041" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="222.504" y="195.961" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C18" gate="G$1" x="243.84" y="198.12">
+<attribute name="NAME" x="245.364" y="201.041" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="245.364" y="195.961" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="Y1" gate="G$1" x="231.14" y="210.82">
+<attribute name="NAME" x="226.56306875" y="213.108459375" size="1.77991875" layer="95"/>
+<attribute name="VALUE" x="226.81696875" y="206.24266875" size="1.78006875" layer="96"/>
+</instance>
+<instance part="GND32" gate="GND" x="233.68" y="185.42">
+<attribute name="VALUE" x="231.775" y="182.245" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -5389,12 +5445,39 @@ More information and support community is available at http://www.element14.com/
 <wire x1="236.22" y1="152.4" x2="233.68" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="152.4" x2="233.68" y2="144.78" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="VSS"/>
+<pinref part="GND30" gate="1" pin="GND"/>
+<wire x1="299.72" y1="193.04" x2="294.64" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="193.04" x2="294.64" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C9" gate="G$1" pin="2"/>
+<pinref part="GND31" gate="1" pin="GND"/>
+<wire x1="353.06" y1="218.44" x2="368.3" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="368.3" y1="218.44" x2="368.3" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="195.58" x2="220.98" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="GND32" gate="GND" pin="GND"/>
+<wire x1="220.98" y1="187.96" x2="233.68" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="C18" gate="G$1" pin="2"/>
+<wire x1="243.84" y1="195.58" x2="243.84" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="187.96" x2="233.68" y2="187.96" width="0.1524" layer="91"/>
+<junction x="233.68" y="187.96"/>
+</segment>
 </net>
 <net name="SCLK_PI" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO11"/>
 <wire x1="91.44" y1="147.32" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
 <label x="99.06" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="SCK"/>
+<wire x1="335.28" y1="200.66" x2="350.52" y2="200.66" width="0.1524" layer="91"/>
+<label x="347.98" y="200.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO_PI" class="0">
@@ -5403,12 +5486,22 @@ More information and support community is available at http://www.element14.com/
 <wire x1="91.44" y1="142.24" x2="106.68" y2="142.24" width="0.1524" layer="91"/>
 <label x="99.06" y="142.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="SO"/>
+<wire x1="335.28" y1="205.74" x2="350.52" y2="205.74" width="0.1524" layer="91"/>
+<label x="347.98" y="205.74" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MOSI_PI" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO10"/>
 <wire x1="91.44" y1="137.16" x2="106.68" y2="137.16" width="0.1524" layer="91"/>
 <label x="99.06" y="137.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="SI"/>
+<wire x1="335.28" y1="203.2" x2="350.52" y2="203.2" width="0.1524" layer="91"/>
+<label x="347.98" y="203.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -5437,6 +5530,11 @@ More information and support community is available at http://www.element14.com/
 <pinref part="PCB1" gate="G$1" pin="GPIO8"/>
 <wire x1="63.5" y1="147.32" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
 <label x="48.26" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="CS"/>
+<wire x1="335.28" y1="208.28" x2="350.52" y2="208.28" width="0.1524" layer="91"/>
+<label x="347.98" y="208.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="UART_RXD" class="0">
@@ -5477,6 +5575,16 @@ More information and support community is available at http://www.element14.com/
 <wire x1="236.22" y1="167.64" x2="198.12" y2="167.64" width="0.1524" layer="91"/>
 <junction x="198.12" y="167.64"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="VDD"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<wire x1="335.28" y1="213.36" x2="340.36" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="213.36" x2="340.36" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="340.36" y1="218.44" x2="340.36" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="218.44" x2="340.36" y2="218.44" width="0.1524" layer="91"/>
+<junction x="340.36" y="218.44"/>
+</segment>
 </net>
 <net name="CAN_H" class="0">
 <segment>
@@ -5501,6 +5609,7 @@ More information and support community is available at http://www.element14.com/
 <segment>
 <pinref part="U$5" gate="G$1" pin="RXCAN"/>
 <wire x1="299.72" y1="210.82" x2="279.4" y2="210.82" width="0.1524" layer="91"/>
+<label x="276.86" y="210.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CAN_PI_TX" class="0">
@@ -5512,30 +5621,39 @@ More information and support community is available at http://www.element14.com/
 <segment>
 <pinref part="U$5" gate="G$1" pin="TXCAN"/>
 <wire x1="299.72" y1="213.36" x2="279.4" y2="213.36" width="0.1524" layer="91"/>
+<label x="276.86" y="213.36" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="OSC2" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="SCK"/>
-<wire x1="335.28" y1="200.66" x2="350.52" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="OSC2"/>
+<wire x1="299.72" y1="198.12" x2="284.48" y2="198.12" width="0.1524" layer="91"/>
+<label x="284.48" y="198.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="1"/>
+<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="220.98" y1="203.2" x2="220.98" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="210.82" x2="226.06" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="231.14" x2="220.98" y2="210.82" width="0.1524" layer="91"/>
+<junction x="220.98" y="210.82"/>
+<label x="220.98" y="228.6" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="OSC1" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="SI"/>
-<wire x1="335.28" y1="203.2" x2="350.52" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="OSC1"/>
+<wire x1="299.72" y1="195.58" x2="284.48" y2="195.58" width="0.1524" layer="91"/>
+<label x="284.48" y="195.58" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$10" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="SO"/>
-<wire x1="335.28" y1="205.74" x2="350.52" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="CS"/>
-<wire x1="335.28" y1="208.28" x2="350.52" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="Y1" gate="G$1" pin="2"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="210.82" x2="243.84" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="210.82" x2="243.84" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="210.82" x2="243.84" y2="231.14" width="0.1524" layer="91"/>
+<junction x="243.84" y="210.82"/>
+<label x="243.84" y="228.6" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
