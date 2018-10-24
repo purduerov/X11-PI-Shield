@@ -4087,6 +4087,64 @@ More information and support community is available at http://www.element14.com/
 </deviceset>
 </devicesets>
 </library>
+<library name="ACS711_ameter">
+<packages>
+<package name="ACS711">
+<wire x1="1.949996875" y1="2.44999375" x2="1.949996875" y2="-2.44999375" width="0.127" layer="51"/>
+<wire x1="-1.949996875" y1="2.44999375" x2="-1.949996875" y2="-2.44999375" width="0.127" layer="51"/>
+<wire x1="-1.949996875" y1="2.44999375" x2="1.949996875" y2="2.44999375" width="0.127" layer="51"/>
+<wire x1="-1.949996875" y1="-2.44999375" x2="1.949996875" y2="-2.44999375" width="0.127" layer="51"/>
+<smd name="IP1+" x="-2.79999375" y="1.905" dx="1.75" dy="0.65" layer="1"/>
+<smd name="IP2+" x="-2.79999375" y="0.635" dx="1.75" dy="0.65" layer="1"/>
+<smd name="IP1-" x="-2.79999375" y="-0.635" dx="1.75" dy="0.65" layer="1"/>
+<smd name="IP2-" x="-2.79999375" y="-1.905" dx="1.75" dy="0.65" layer="1"/>
+<smd name="VCC" x="2.79999375" y="1.905" dx="1.75" dy="0.65" layer="1"/>
+<smd name="VIOUT" x="2.79999375" y="0.635" dx="1.75" dy="0.65" layer="1"/>
+<smd name="FAULT" x="2.79999375" y="-0.635" dx="1.75" dy="0.65" layer="1"/>
+<smd name="GND" x="2.79999375" y="-1.905" dx="1.75" dy="0.65" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ACS711">
+<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<pin name="IP1+" x="-12.7" y="7.62" length="middle"/>
+<pin name="IP2+" x="-12.7" y="2.54" length="middle"/>
+<pin name="IP1-" x="-12.7" y="-2.54" length="middle"/>
+<pin name="IP2-" x="-12.7" y="-7.62" length="middle"/>
+<pin name="GND" x="12.7" y="-7.62" length="middle" rot="R180"/>
+<pin name="FAULT" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="VIOUT" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="VCC" x="12.7" y="7.62" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ACS711">
+<gates>
+<gate name="G$1" symbol="ACS711" x="-10.16" y="45.72"/>
+</gates>
+<devices>
+<device name="" package="ACS711">
+<connects>
+<connect gate="G$1" pin="FAULT" pad="FAULT"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="IP1+" pad="IP1+"/>
+<connect gate="G$1" pin="IP1-" pad="IP1-"/>
+<connect gate="G$1" pin="IP2+" pad="IP2+"/>
+<connect gate="G$1" pin="IP2-" pad="IP2-"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="VIOUT" pad="VIOUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4187,6 +4245,10 @@ More information and support community is available at http://www.element14.com/
 <part name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 <part name="R14" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U$4" library="ACS711_ameter" deviceset="ACS711" device=""/>
+<part name="C3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="4.7UF" device="0603" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
+<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4353,6 +4415,17 @@ More information and support community is available at http://www.element14.com/
 <instance part="GND10" gate="1" x="314.96" y="50.8">
 <attribute name="VALUE" x="312.42" y="48.26" size="1.778" layer="96"/>
 </instance>
+<instance part="U$4" gate="G$1" x="210.82" y="53.34"/>
+<instance part="C3" gate="G$1" x="251.46" y="53.34">
+<attribute name="NAME" x="252.984" y="56.261" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="252.984" y="51.181" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND17" gate="1" x="251.46" y="40.64">
+<attribute name="VALUE" x="248.92" y="38.1" size="1.778" layer="96"/>
+</instance>
+<instance part="+3V7" gate="G$1" x="251.46" y="78.74">
+<attribute name="VALUE" x="248.92" y="73.66" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4469,6 +4542,15 @@ More information and support community is available at http://www.element14.com/
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="314.96" y1="60.96" x2="314.96" y2="53.34" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="251.46" y1="50.8" x2="251.46" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<wire x1="251.46" y1="45.72" x2="251.46" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="45.72" x2="251.46" y2="45.72" width="0.1524" layer="91"/>
+<junction x="251.46" y="45.72"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -4546,6 +4628,15 @@ More information and support community is available at http://www.element14.com/
 <wire x1="45.72" y1="58.42" x2="45.72" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="58.42" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
 <junction x="45.72" y="58.42"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="VCC"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="223.52" y1="60.96" x2="251.46" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="60.96" x2="251.46" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+<wire x1="251.46" y1="60.96" x2="251.46" y2="76.2" width="0.1524" layer="91"/>
+<junction x="251.46" y="60.96"/>
 </segment>
 </net>
 <net name="NRST" class="0">
@@ -4812,12 +4903,42 @@ More information and support community is available at http://www.element14.com/
 <wire x1="314.96" y1="96.52" x2="314.96" y2="86.36" width="0.1524" layer="91"/>
 <label x="314.96" y="96.52" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="IP1+"/>
+<pinref part="U$4" gate="G$1" pin="IP2+"/>
+<wire x1="198.12" y1="60.96" x2="198.12" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
+<junction x="198.12" y="60.96"/>
+<label x="177.8" y="60.96" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="+3V3ROV" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="347.98" y1="96.52" x2="347.98" y2="86.36" width="0.1524" layer="91"/>
 <label x="347.98" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PI_CURRENT" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PA0"/>
+<wire x1="264.16" y1="203.2" x2="248.92" y2="203.2" width="0.1524" layer="91"/>
+<label x="243.84" y="203.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="VIOUT"/>
+<wire x1="223.52" y1="55.88" x2="243.84" y2="55.88" width="0.1524" layer="91"/>
+<label x="231.14" y="55.88" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+5V_TO_PI" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="IP1-"/>
+<pinref part="U$4" gate="G$1" pin="IP2-"/>
+<wire x1="198.12" y1="50.8" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="45.72" x2="177.8" y2="45.72" width="0.1524" layer="91"/>
+<junction x="198.12" y="45.72"/>
+<label x="177.8" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -5236,16 +5357,15 @@ More information and support community is available at http://www.element14.com/
 </net>
 <net name="+5V" class="0">
 <segment>
+<wire x1="40.64" y1="91.44" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+<pinref part="PCB1" gate="G$1" pin="5V@2"/>
+<wire x1="40.64" y1="91.44" x2="63.5" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="PCB1" gate="G$1" pin="5V@4"/>
 <wire x1="63.5" y1="96.52" x2="58.42" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="96.52" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="PCB1" gate="G$1" pin="5V@2"/>
-<wire x1="58.42" y1="93.98" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="91.44" x2="63.5" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="93.98" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="93.98" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
-<junction x="58.42" y="93.98"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
+<label x="55.88" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET" class="0">
