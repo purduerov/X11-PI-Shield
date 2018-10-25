@@ -5197,6 +5197,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="177.8" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="USART_RX" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PB7"/>
+<wire x1="281.94" y1="231.14" x2="281.94" y2="246.38" width="0.1524" layer="91"/>
+<label x="284.48" y="236.22" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="USART_TX" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PB6"/>
+<wire x1="284.48" y1="231.14" x2="284.48" y2="246.38" width="0.1524" layer="91"/>
+<label x="287.02" y="236.22" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -5696,14 +5710,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="347.98" y="208.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="UART_RXD" class="0">
+<net name="USART_TX" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO15"/>
 <wire x1="63.5" y1="111.76" x2="45.72" y2="111.76" width="0.1524" layer="91"/>
 <label x="45.72" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="UART_TXD" class="0">
+<net name="USART_RX" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO14"/>
 <wire x1="63.5" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
