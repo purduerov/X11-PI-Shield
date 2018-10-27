@@ -5775,26 +5775,26 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="CAN_PI_RX" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="TXD"/>
-<wire x1="236.22" y1="162.56" x2="218.44" y2="162.56" width="0.1524" layer="91"/>
-<label x="213.36" y="162.56" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$5" gate="G$1" pin="RXCAN"/>
 <wire x1="299.72" y1="210.82" x2="279.4" y2="210.82" width="0.1524" layer="91"/>
 <label x="276.86" y="210.82" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="CAN_PI_TX" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="RXD"/>
 <wire x1="236.22" y1="157.48" x2="218.44" y2="157.48" width="0.1524" layer="91"/>
 <label x="213.36" y="157.48" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="CAN_PI_TX" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="TXCAN"/>
 <wire x1="299.72" y1="213.36" x2="279.4" y2="213.36" width="0.1524" layer="91"/>
 <label x="276.86" y="213.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="TXD"/>
+<wire x1="236.22" y1="162.56" x2="218.44" y2="162.56" width="0.1524" layer="91"/>
+<label x="213.36" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OSC2" class="0">
