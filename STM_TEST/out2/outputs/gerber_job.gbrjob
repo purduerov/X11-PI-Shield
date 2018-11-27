@@ -1,0 +1,13 @@
+G04 Gerber job file.*
+%TF.FileFunction,JobInfo*%
+%TF.GenerationSoftware,Autodesk,EAGLE,8.6.1*%
+%TF.CreationDate,2018-11-27T14:45:23Z*%
+%TF.Part,Single*%
+%MOMM*%
+%TJ.B_Owner,Jacob Bobson <jbobson@purdue.edu>*%
+%TJ.B_ID,STM_TEST*%
+%TJ.B_LayerNum,2*%
+%TJ.B_Thickness,1.572300*%
+%TJ.B_Size_X,59.944000*%
+%TJ.B_Size_Y,69.596000*%
+M02*
