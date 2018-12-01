@@ -7234,15 +7234,6 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <label x="27.94" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="35.56" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="Y1" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="58.42" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
-<junction x="43.18" y="55.88"/>
-</segment>
-<segment>
 <pinref part="R19" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
 <label x="63.5" y="55.88" size="1.778" layer="95"/>
@@ -7253,15 +7244,6 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="U$1" gate="G$1" pin="OSC2"/>
 <wire x1="40.64" y1="127" x2="27.94" y2="127" width="0.1524" layer="91"/>
 <label x="27.94" y="127" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="Y1" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="68.58" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="71.12" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
-<junction x="43.18" y="71.12"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="71.12" x2="50.8" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
@@ -7468,6 +7450,30 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
+<net name="OSC2_XTAL" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="71.12" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="Y1" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="71.12" x2="50.8" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="68.58" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
+<junction x="43.18" y="71.12"/>
+<label x="38.1" y="76.2" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="OSC1_XTAL" class="0">
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="58.42" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
+<junction x="43.18" y="55.88"/>
+<label x="38.1" y="53.34" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -7620,14 +7626,14 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="J4" gate="G$1" pin="5"/>
-<wire x1="208.28" y1="43.18" x2="220.98" y2="43.18" width="0.1524" layer="91"/>
-<label x="213.36" y="43.18" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO10"/>
 <wire x1="45.72" y1="66.04" x2="55.88" y2="66.04" width="0.1524" layer="91"/>
 <label x="50.8" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="3"/>
+<wire x1="208.28" y1="38.1" x2="220.98" y2="38.1" width="0.1524" layer="91"/>
+<label x="213.36" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -7644,26 +7650,26 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 </net>
 <net name="CLK" class="0">
 <segment>
-<pinref part="J4" gate="G$1" pin="3"/>
-<wire x1="208.28" y1="38.1" x2="220.98" y2="38.1" width="0.1524" layer="91"/>
-<label x="213.36" y="38.1" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO11"/>
 <wire x1="45.72" y1="76.2" x2="55.88" y2="76.2" width="0.1524" layer="91"/>
 <label x="50.8" y="76.2" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="CS" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="35.56" x2="220.98" y2="35.56" width="0.1524" layer="91"/>
 <label x="213.36" y="35.56" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="CS" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO8"/>
 <wire x1="17.78" y1="76.2" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
 <label x="7.62" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="5"/>
+<wire x1="208.28" y1="43.18" x2="220.98" y2="43.18" width="0.1524" layer="91"/>
+<label x="213.36" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -7739,9 +7745,9 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <label x="185.42" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO13"/>
-<wire x1="45.72" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
-<label x="50.8" y="101.6" size="1.778" layer="95"/>
+<pinref part="PCB1" gate="G$1" pin="GPIO27"/>
+<wire x1="45.72" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
+<label x="50.8" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -7816,6 +7822,11 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <wire x1="233.68" y1="137.16" x2="243.84" y2="137.16" width="0.1524" layer="91"/>
 <label x="238.76" y="137.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO22"/>
+<wire x1="45.72" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="INT" class="0">
 <segment>
@@ -7833,14 +7844,14 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 </net>
 <net name="DI" class="0">
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO23"/>
-<wire x1="17.78" y1="55.88" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
-<label x="7.62" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$9" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="15.24" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
 <label x="132.08" y="15.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO16"/>
+<wire x1="17.78" y1="106.68" x2="7.62" y2="106.68" width="0.1524" layer="91"/>
+<label x="7.62" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PI_POWER" class="0">
@@ -7867,13 +7878,6 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="J5" gate="G$1" pin="1"/>
 <wire x1="238.76" y1="38.1" x2="246.38" y2="38.1" width="0.1524" layer="91"/>
 <label x="241.3" y="38.1" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IMU_NET" class="0">
-<segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO6"/>
-<wire x1="45.72" y1="96.52" x2="53.34" y2="96.52" width="0.1524" layer="91"/>
-<label x="50.8" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
