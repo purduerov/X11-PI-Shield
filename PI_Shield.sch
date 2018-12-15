@@ -7116,11 +7116,17 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <part name="U$11" library="con-hirose-df13" deviceset="DF13-3P-1.25" device="DSA"/>
 <part name="C13" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="22NF/22,000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414@1/1" value=".1u"/>
 <part name="R19" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="0"/>
+<part name="R20" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="4.7k"/>
+<part name="U$12" library="con-hirose-df13" deviceset="DF13-3P-1.25" device="DSA"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="213.36" y="50.8" size="1.778" layer="91">NMOS</text>
+<text x="45.72" y="149.86" size="1.778" layer="91">CAN Controller</text>
+<text x="137.16" y="152.4" size="1.778" layer="91">CAN Transceiver</text>
+<text x="35.56" y="81.28" size="1.778" layer="91">Oscillator</text>
+<text x="200.66" y="154.94" size="1.778" layer="91">CAN Termination</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -7485,7 +7491,7 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <text x="198.12" y="160.02" size="1.778" layer="91">BNO055 IMU</text>
 <text x="205.74" y="111.76" size="1.778" layer="91">External Power Supply Connectors</text>
 <text x="129.54" y="157.48" size="1.778" layer="91">LED to Indicate Power is ON</text>
-<text x="127" y="25.4" size="1.778" layer="91">Potential Temperature Sensor Connector</text>
+<text x="127" y="33.02" size="1.778" layer="91">Potential Temperature Sensor Connector</text>
 <text x="172.72" y="106.68" size="1.778" layer="91">Power Supply Connectors</text>
 </plain>
 <instances>
@@ -7515,6 +7521,8 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 </instance>
 <instance part="U$9" gate="G$1" x="149.86" y="15.24"/>
 <instance part="C13" gate="G$1" x="231.14" y="160.02" rot="R90"/>
+<instance part="R20" gate="G$1" x="124.46" y="22.86" rot="R90"/>
+<instance part="U$12" gate="G$1" x="185.42" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -7622,6 +7630,11 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="U$9" gate="G$1" pin="3"/>
 <wire x1="144.78" y1="12.7" x2="132.08" y2="12.7" width="0.1524" layer="91"/>
 <label x="132.08" y="12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="3"/>
+<wire x1="180.34" y1="53.34" x2="172.72" y2="53.34" width="0.1524" layer="91"/>
+<label x="170.18" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -7778,6 +7791,15 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="U$9" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
 <label x="132.08" y="17.78" size="1.778" layer="95"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="27.94" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="30.48" x2="132.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="30.48" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="58.42" x2="172.72" y2="58.42" width="0.1524" layer="91"/>
+<label x="170.18" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -7847,11 +7869,14 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="U$9" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="15.24" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
 <label x="132.08" y="15.24" size="1.778" layer="95"/>
+<wire x1="132.08" y1="15.24" x2="124.46" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="15.24" x2="124.46" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO16"/>
-<wire x1="17.78" y1="106.68" x2="7.62" y2="106.68" width="0.1524" layer="91"/>
-<label x="7.62" y="106.68" size="1.778" layer="95"/>
+<pinref part="PCB1" gate="G$1" pin="GPIO21"/>
+<wire x1="17.78" y1="116.84" x2="7.62" y2="116.84" width="0.1524" layer="91"/>
+<label x="7.62" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PI_POWER" class="0">
@@ -7878,6 +7903,18 @@ Source: &lt;a href="http://www.hirose.co.jp/cataloge_hp/e53600014.pdf"&gt;http:/
 <pinref part="J5" gate="G$1" pin="1"/>
 <wire x1="238.76" y1="38.1" x2="246.38" y2="38.1" width="0.1524" layer="91"/>
 <label x="241.3" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM" class="0">
+<segment>
+<pinref part="U$12" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="55.88" x2="172.72" y2="55.88" width="0.1524" layer="91"/>
+<label x="170.18" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO12"/>
+<wire x1="17.78" y1="96.52" x2="7.62" y2="96.52" width="0.1524" layer="91"/>
+<label x="7.62" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
