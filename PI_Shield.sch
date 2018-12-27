@@ -9663,9 +9663,9 @@ part number 2062-2P from STA</description>
 <label x="185.42" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO27"/>
-<wire x1="45.72" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
-<label x="50.8" y="50.8" size="1.778" layer="95"/>
+<pinref part="PCB1" gate="G$1" pin="GPIO17"/>
+<wire x1="45.72" y1="45.72" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
+<label x="50.8" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -9755,15 +9755,15 @@ part number 2062-2P from STA</description>
 <label x="238.76" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO22"/>
-<wire x1="45.72" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
-<label x="50.8" y="55.88" size="1.778" layer="95"/>
+<pinref part="PCB1" gate="G$1" pin="GPIO27"/>
+<wire x1="45.72" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
+<label x="50.8" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="INT" class="0">
 <segment>
 <pinref part="PCB1" gate="G$1" pin="GPIO19"/>
-<wire x1="45.72" y1="106.68" x2="53.34" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="106.68" x2="55.88" y2="106.68" width="0.1524" layer="91"/>
 <label x="50.8" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -9782,6 +9782,11 @@ part number 2062-2P from STA</description>
 <wire x1="132.08" y1="15.24" x2="124.46" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="124.46" y1="15.24" x2="124.46" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO6"/>
+<wire x1="45.72" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
+<label x="50.8" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PI_POWER" class="0">
@@ -9817,9 +9822,9 @@ part number 2062-2P from STA</description>
 <label x="170.18" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PCB1" gate="G$1" pin="GPIO12"/>
-<wire x1="17.78" y1="96.52" x2="7.62" y2="96.52" width="0.1524" layer="91"/>
-<label x="7.62" y="96.52" size="1.778" layer="95"/>
+<pinref part="PCB1" gate="G$1" pin="GPIO13"/>
+<wire x1="45.72" y1="101.6" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
+<label x="50.8" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DI3" class="0">
@@ -9841,6 +9846,13 @@ part number 2062-2P from STA</description>
 <pinref part="PCB1" gate="G$1" pin="GPIO16"/>
 <wire x1="17.78" y1="106.68" x2="7.62" y2="106.68" width="0.1524" layer="91"/>
 <label x="7.62" y="106.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RESET_TO_PI" class="0">
+<segment>
+<pinref part="PCB1" gate="G$1" pin="GPIO22"/>
+<wire x1="45.72" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
