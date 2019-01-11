@@ -9705,15 +9705,6 @@ part number 2062-2P from STA</description>
 <junction x="193.04" y="99.06"/>
 </segment>
 <segment>
-<pinref part="U$9" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
-<label x="132.08" y="17.78" size="1.778" layer="95"/>
-<pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="27.94" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="30.48" x2="132.08" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="30.48" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$12" gate="G$1" pin="1"/>
 <wire x1="180.34" y1="58.42" x2="172.72" y2="58.42" width="0.1524" layer="91"/>
 <label x="170.18" y="58.42" size="1.778" layer="95"/>
@@ -9758,6 +9749,15 @@ part number 2062-2P from STA</description>
 <pinref part="J1" gate="G$1" pin="4"/>
 <wire x1="226.06" y1="78.74" x2="236.22" y2="78.74" width="0.1524" layer="91"/>
 <label x="231.14" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
+<label x="132.08" y="17.78" size="1.778" layer="95"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="27.94" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="30.48" x2="132.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="30.48" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IMU_INT" class="0">
